@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration status="info">
+  <Appenders>
+    <RollingFile name="File" fileName="${basePath}/loggerfile.log" filePattern="${basePath}/loggerfile-%d{yyyy-MM-dd}.log">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+      <SizeBasedTriggeringPolicy size="500" />
+    </RollingFile>
+  </Appenders>
+  <Loggers>
+    
+    <Root level="info">
+      <AppenderRef ref="File"/>
+    </Root>
+  </Loggers>
+</Configuration>
